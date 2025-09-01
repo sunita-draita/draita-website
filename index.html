@@ -1,0 +1,180 @@
+<!--
+Project: Draita Website (multi‑file setup)
+Files:
+  1) /index.html
+  2) /assets/styles.css
+  3) /assets/main.js
+  4) /assets/Draita_BrokenToWhole_Transparent.png (provided by you)
+Note: Create the folders/files exactly as listed. index.html links to the CSS/JS.
+-->
+
+<!-- ========================= 1) /index.html ========================= -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Draita – RPA, Maintenance, Control Tower, PMO & Process Improvement</title>
+  <meta name="description" content="Draita builds and runs reliable automations with strong program management. RPA development, maintenance, Control Tower, Project Management, and Process Improvements." />
+  <meta name="theme-color" content="#0A0F1C" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav" role="navigation" aria-label="Primary navigation">
+    <a href="#home" class="brand" aria-label="Draita Home">
+  <img src="assets/Draita_BrokenToWhole_Transparent.png" width="60" height="60" alt="Draita logo" />
+  <span>Draita</span>
+</a>
+
+    <button id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">☰</button>
+    <nav id="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact" class="btn btn-brand">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home" class="hero">
+  <div class="container">
+    <p class="eyebrow">RPA • Maintenance • Control Tower • Project Management • Process Improvement • AI</p>
+    <h1>Automation that pays for itself.</h1>
+    <p class="lead">We build, run, and scale reliable automations. Our team blends deep technology expertise, proven RPA delivery, and practical AI application—ensuring your digital workforce delivers consistent results.</p>
+    <div class="cta">
+      <a class="btn btn-brand" href="#services">Explore services</a>
+      <a class="btn btn-outline" href="#about">Why Draita</a>
+    </div>
+  </div>
+</main>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2>About us</h2>
+    <p class="muted">We are a senior team of RPA and AI practitioners with a track record in enterprise integration, process re-engineering, and running production-grade automation programs at scale.</p>
+    <div class="grid kpis" aria-label="Experience snapshot">
+      <div class="card">
+        <div class="kpi"><span class="num">Trusted</span></div>
+        <div class="muted">Recognized expertise across diverse industries and technologies</div>
+      </div>
+      <div class="card">
+        <div class="kpi"><span class="num">Proven Delivery</span></div>
+        <div class="muted">Hands-on RPA implementations with UiPath, Automation Anywhere, and enterprise automation tools</div>
+      </div>
+      <div class="card">
+        <div class="kpi"><span class="num">Practical Innovation</span></div>
+        <div class="muted">Balanced adoption of AI and automation to solve real business problems</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section" aria-label="Services">
+  <div class="container">
+    <h2>Services</h2>
+    <div class="grid services">
+
+      <article class="card">
+        <h3>RPA Development</h3>
+        <p class="muted">Design, build, and test automations using best-practice frameworks, resilient selectors, and robust exception handling.</p>
+        <ul>
+          <li>Process discovery & ROI mapping</li>
+          <li>UiPath & Automation Anywhere builds</li>
+          <li>Secure credentials & secrets management</li>
+          <li>Testing harnesses and versioned releases</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Maintenance</h3>
+        <p class="muted">Keep bots healthy as apps and rules change—patching, upgrades, and proactive monitoring to prevent breakages.</p>
+        <ul>
+          <li>Continuous monitoring & alerting</li>
+          <li>Bug fixes and platform upgrades</li>
+          <li>Performance optimization</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Control Tower</h3>
+        <p class="muted">Centralized governance for your automation program with full visibility and control.</p>
+        <ul>
+          <li>Bot scheduling & orchestration</li>
+          <li>Audit-ready compliance logs</li>
+          <li>Operational dashboards</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Project Management</h3>
+        <p class="muted">Structured leadership and execution excellence across automation initiatives.</p>
+        <ul>
+          <li>PMO setup and governance</li>
+          <li>Agile and hybrid delivery models</li>
+          <li>Risk, dependency, and stakeholder management</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Process Improvement</h3>
+        <p class="muted">Identify inefficiencies and drive sustainable improvements that maximize automation ROI.</p>
+        <ul>
+          <li>Lean and Six Sigma practices</li>
+          <li>Process diagnostics & redesign</li>
+          <li>Automation feasibility assessments</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact us</h2>
+    <p class="muted">Tell us about your processes and goals. We’ll reply within one business day.</p>
+
+    <div id="contact-wrapper">
+      <!-- Form -->
+		<form id="contact-form" novalidate>
+		  <label for="name">Name*</label>
+		  <input id="name" name="name" type="text" autocomplete="name" required />
+
+		  <label for="email">Email*</label>
+		  <input id="email" name="email" type="email" autocomplete="email" required />
+
+		  <label for="phone">Contact number</label>
+		  <input id="phone" name="phone" type="tel" autocomplete="tel" />
+
+		  <label for="message">How can we help you?*</label>
+		  <textarea id="message" name="message" placeholder="What would you like to automate?" required></textarea>
+
+		  <button class="btn btn-brand" type="submit">Send</button>
+		  <p class="muted small">By submitting, you consent to us contacting you about your request.</p>
+		</form>
+
+		<!-- Thank you screen (hidden by default) -->
+		<div id="form-success" class="hidden thankyou-card">
+		  <h3>Thank you!</h3>
+		  <p>Your message was sent successfully. Our team will reply within one business day.</p>
+		  <a href="#home" class="btn btn-brand">Back to Home</a>
+		</div>
+
+
+   
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container foot">
+    <p>&copy; <span id="year"></span> Draita. All rights reserved.</p>  </div>
+	 <div><a href="#home">Back to top ↑</a></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
