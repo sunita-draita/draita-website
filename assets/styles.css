@@ -106,6 +106,24 @@ textarea{ min-height:140px; resize:vertical; }
 input:focus,textarea:focus{ outline:3px solid var(--ring); border-color:#003b8f; }
 
 .site-footer{ padding:2rem 0 3rem; color: var(--muted); font-size:.95rem; border-top:1px solid rgba(192,192,192,.12); }
+.site-footer .tagline {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--silver);
+}
+.mission-statement {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--silver);
+  line-height: 1.6;
+  margin: 1.5rem auto;
+  max-width: 900px;
+  text-align: center;
+  border-left: 4px solid var(--gold);
+  padding-left: 1rem;
+}
+
 .foot{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; }
 .hidden { display: none; }
 
@@ -163,3 +181,4 @@ input:focus,textarea:focus{ outline:3px solid var(--ring); border-color:#003b8f;
   border-top: 2px solid var(--gold);
   border-radius: 50% / 100%; /* creates the arc */
 }
+
