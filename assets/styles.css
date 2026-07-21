@@ -5,9 +5,9 @@
   --silver: #475569; /* Slate Silver for body muted elements */
   --navy:   #0A0F1C; /* Logo Background Slate Navy */
 
-  /* Light Mode Design Tokens */
-  --bg: #F8FAFC;              /* Clean, modern light off-white background */
-  --bg-alt: #F1F5F9;          /* Light slate tint for section contrast */
+  /* Light Mode Design Tokens (Darkened by ~3 Points) */
+  --bg: #F5F7F9;              /* Slightly deeper off-white background */
+  --bg-alt: #EDF1F5;          /* Slightly deeper slate tint for alternating sections */
   --text: #0F172A;            /* Deep slate navy for high contrast text */
   --muted: #475569;           /* Secondary readable body text */
   --card: #FFFFFF;            /* Elevated crisp white cards */
