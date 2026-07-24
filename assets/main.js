@@ -50,12 +50,28 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(() => {
         form.style.display = "none"; // hide form
         successCard.classList.remove("hidden"); // show thank-you card
+
+        // Track successful contact form submission
+        if (typeof pendo !== "undefined") {
+          pendo.track("contact_form_submitted", {
+            hasPhone: !!form.phone.value.trim(),
+            messageLength: message.length
+          });
+        }
       })
       .catch((err) => {
         console.error(err);
         alert("Sorry—something went wrong. Please try again, or email hello@draita.ai.");
         btn.disabled = false;
         btn.textContent = originalBtnText;
+
+        // Track failed contact form submission
+        if (typeof pendo !== "undefined") {
+          pendo.track("contact_form_submission_failed", {
+            errorMessage: String(err && err.text || err).substring(0, 200),
+            messageLength: message.length
+          });
+        }
       });
   });
 });
