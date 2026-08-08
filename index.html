@@ -1,248 +1,204 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
 
-  <title>Draita.ai | AI Governance & Responsible Transformation</title>
-  <meta name="description" content="Draita helps organizations adopt AI and automation responsibly through governance readiness, process clarity, operational improvement, and practical digital transformation advisory.">
+  <title>Draita.ai | Process Re-engineering & Intelligent Automation</title>
+  <meta name="description" content="Draita re-engineers business processes and delivers intelligent automation using RPA and AI—designed for resilience, governance, and real-world scale." />
+  <meta name="theme-color" content="#F5F7F9" />
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            cobalt: '#0047AB',
-            gold: '#D4AF37',
-            navy: '#0A0F1C',
-            silver: '#475569',
-            'bg-base': '#F5F7F9',
-            'section-alt': '#EDF1F5',
-            'card-border': '#E2E8F0',
-          },
-          fontFamily: {
-            brand: ['Cinzel', 'serif'],
-            sans: ['Montserrat', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-
-  <style>
-    body {
-      background-color: #F5F7F9;
-      color: #0F172A;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .brand-text {
-      font-family: 'Cinzel', serif;
-      letter-spacing: 0.12em;
-    }
-
-    .focus-ring:focus {
-      outline: none;
-      border-color: #0047AB;
-      box-shadow: 0 0 0 3px rgba(0, 71, 171, 0.2);
-    }
-  </style>
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
+<body>
 
-<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-cobalt selection:text-white">
+<header class="site-header">
+  <div class="container nav" role="navigation" aria-label="Primary navigation">
+    <a href="#" class="brand">
+      <img src="assets/Draita_BrokenToWhole_Transparent.png" alt="Draita Logo">
+      DRAITA<span>.ai</span>
+    </a>
 
-  <header class="w-full border-b border-card-border bg-white/80 backdrop-blur-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-      
-      <a href="#" class="flex items-center gap-3 group" aria-label="Draita.ai home">
-        <div class="w-10 h-10 rounded-xl bg-navy flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
-          <span class="text-gold font-bold text-xl">D</span>
+    <button id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">☰</button>
+    <nav id="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact" class="btn btn-brand">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home" class="hero">
+  <div class="container">
+    <p class="eyebrow">Intelligent Automation • RPA Engineering • AI Governance • Program Delivery</p>
+    <h1>Intelligent automation built for the real world.</h1>
+    <p class="lead">Draita designs, operates, and scales intelligent automation programs that actually survive production. We combine proven RPA engineering with practical AI, governance, and program leadership — so your digital workforce delivers results you can trust.</p>
+
+    <div class="cta">
+      <a class="btn btn-brand" href="#services">Explore services</a>
+      <a class="btn btn-outline" href="#about">Why Draita</a>
+    </div>
+  </div>
+</main>
+
+<section id="mission" class="section">
+  <div class="container">
+    <h2>Our Mission</h2>
+    <blockquote class="mission-statement">
+      At Draita, we turn operational complexity into governed, intelligent automation. We apply AI responsibly and deliberately — creating resilient systems that deliver measurable value for businesses, people, and the planet.
+    </blockquote>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <h2>About us</h2>
+    <p class="muted">Draita is a senior-led intelligent automation consultancy. We’ve designed and run production-grade automation programs across complex enterprise environments — where reliability, compliance, and operational ownership matter as much as speed.</p>
+    <p class="muted">Our work spans intelligent process discovery, resilient RPA engineering, AI-assisted automation, and long-term program governance. We don’t chase hype. We build automation that holds up under change.</p>
+
+    <div class="grid kpis" aria-label="Experience snapshot">
+      <div class="card">
+        <div class="kpi"><span class="num">Production-First</span></div>
+        <div class="muted">
+          Automations engineered for uptime, recoverability, and long-term ownership
         </div>
-
-        <span class="brand-text text-xl font-bold text-navy tracking-widest uppercase">
-          DRAITA<span class="font-sans text-cobalt text-lg font-semibold lowercase tracking-normal">.ai</span>
-        </span>
-      </a>
-
-      <div class="hidden md:flex items-center gap-3">
-        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-cobalt text-xs font-bold uppercase tracking-wider">
-          <span class="w-2 h-2 rounded-full bg-cobalt animate-pulse"></span>
-          Launching Soon
-        </span>
       </div>
+      <div class="card">
+        <div class="kpi"><span class="num">Governed by Design</span></div>
+        <div class="muted">
+          Audit-ready logs, controls, and traceability built into every automation
+        </div>
+      </div>
+      <div class="card">
+        <div class="kpi"><span class="num">Practical AI</span></div>
+        <div class="muted">
+          AI applied where it adds clarity — not risk — across documents, decisions, and exceptions
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section" aria-label="Services">
+  <div class="container">
+    <h2>Services</h2>
+    <div class="grid services">
+
+      <article class="card">
+        <h3>Intelligent Automation Engineering</h3>
+        <p class="muted">
+          Design and build resilient automations that combine RPA with selective AI augmentation.
+        </p>
+        <ul>
+          <li>Process discovery & automation suitability analysis</li>
+          <li>UiPath & Automation Anywhere development using proven frameworks</li>
+          <li>AI-assisted document handling and exception classification</li>
+          <li>Secure credentials, versioning, and controlled releases</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Automation Operations & Reliability</h3>
+        <p class="muted">
+          Operate and sustain automation programs as living systems — not one-off builds.
+        </p>
+        <ul>
+          <li>Proactive monitoring and failure prediction</li>
+          <li>Bot resilience against UI, rule, and data changes</li>
+          <li>Platform upgrades and controlled enhancements</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Governance & Control Plane</h3>
+        <p class="muted">
+          Central oversight for intelligent automation programs with transparency and accountability.
+        </p>
+        <ul>
+          <li>Scheduling, orchestration, and workload balancing</li>
+          <li>Audit-ready logs and compliance reporting</li>
+          <li>Operational dashboards and KPI visibility</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Automation Program Leadership</h3>
+        <p class="muted">
+          Senior delivery leadership for automation initiatives that cut across teams and systems.
+        </p>
+        <ul>
+          <li>Automation PMO and governance models</li>
+          <li>Risk, dependency, and stakeholder management</li>
+          <li>Assess → Pilot → Stabilize → Scale delivery approach</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Process Intelligence & Optimization</h3>
+        <p class="muted">
+          Use data, process insight, and automation intelligence to target the right problems.
+        </p>
+        <ul>
+          <li>Process diagnostics and redesign</li>
+          <li>Automation feasibility and ROI validation</li>
+          <li>Continuous improvement supported by automation telemetry</li>
+        </ul>
+      </article>
 
     </div>
-  </header>
+  </div>
+</section>
 
-  <main class="flex-grow flex items-center justify-center py-16 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-gold text-xs font-bold uppercase tracking-widest mb-8 shadow-sm">
-        AI Governance • Responsible Automation • Digital Transformation
+<section id="contact" class="section">
+  <div class="container">
+    <h2>Contact us</h2>
+    <p class="muted">
+      Tell us where automation is breaking down or where intelligence is missing. We’ll respond with clarity — not a sales pitch.
+    </p>
+
+    <div id="contact-wrapper">
+      <form id="contact-form" novalidate>
+        <label for="name">Name*</label>
+        <input id="name" name="name" type="text" autocomplete="name" required />
+
+        <label for="email">Email*</label>
+        <input id="email" name="email" type="email" autocomplete="email" required />
+
+        <label for="phone">Contact number</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" />
+
+        <label for="message">How can we help you?*</label>
+        <textarea id="message" name="message" placeholder="What would you like to automate?" required></textarea>
+
+        <button class="btn btn-brand" type="submit">Send Message</button>
+        <p class="muted small">By submitting, you consent to us contacting you about your request.</p>
+      </form>
+
+      <div id="form-success" class="hidden thankyou-card">
+        <h3>Thank you!</h3>
+        <p>Your message was sent successfully. Our team will reply within one business day.</p>
+        <a href="#home" class="btn btn-brand">Back to Home</a>
       </div>
-
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy tracking-tight leading-[1.2] mb-6">
-        Navigate AI and automation with clarity, governance, and confidence.
-      </h1>
-
-      <p class="text-base sm:text-lg text-silver leading-relaxed max-w-3xl mx-auto mb-12 font-medium">
-        Draita helps organizations improve operations and adopt emerging technology responsibly by combining 
-        <strong class="text-navy">process clarity</strong>, 
-        <strong class="text-navy">governance discipline</strong>, and 
-        <strong class="text-navy">practical delivery experience</strong>. 
-        We help business and technology teams understand what is being used, where governance is missing, and what needs to be improved before risk, complexity, or audit pressure forces the conversation.
-      </p>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left max-w-5xl mx-auto mb-16">
-        
-        <div class="bg-white p-7 rounded-2xl border border-card-border shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-10 h-10 rounded-lg bg-blue-50 text-cobalt flex items-center justify-center font-bold text-sm mb-4">
-            01
-          </div>
-          <h3 class="text-lg font-bold text-navy mb-2">AI Governance Readiness</h3>
-          <p class="text-sm text-silver leading-relaxed">
-            Assess AI adoption, governance gaps, evidence readiness, risk exposure, and practical next steps for responsible AI oversight.
-          </p>
-        </div>
-
-        <div class="bg-white p-7 rounded-2xl border border-card-border shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-10 h-10 rounded-lg bg-amber-50 text-gold flex items-center justify-center font-bold text-sm mb-4">
-            02
-          </div>
-          <h3 class="text-lg font-bold text-navy mb-2">Process & Automation Advisory</h3>
-          <p class="text-sm text-silver leading-relaxed">
-            Identify where automation, AI, and workflow improvement can create value without adding unnecessary operational risk.
-          </p>
-        </div>
-
-        <div class="bg-white p-7 rounded-2xl border border-card-border shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-10 h-10 rounded-lg bg-slate-100 text-navy flex items-center justify-center font-bold text-sm mb-4">
-            03
-          </div>
-          <h3 class="text-lg font-bold text-navy mb-2">Governance-Led Delivery</h3>
-          <p class="text-sm text-silver leading-relaxed">
-            Support transformation initiatives with delivery structure, stakeholder alignment, documentation, controls, and implementation discipline.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="bg-navy text-white rounded-3xl p-8 md:p-12 shadow-xl max-w-2xl mx-auto text-left relative overflow-hidden">
-        <div class="absolute -top-24 -right-24 w-60 h-60 bg-cobalt/20 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="mb-8 relative">
-          <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">
-            Early Advisory Enquiries
-          </h2>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Draita.ai is launching soon. For early conversations, advisory enquiries, or collaboration opportunities, submit your details below or email 
-            <a href="mailto:hello@draita.ai" class="text-gold underline font-semibold hover:text-amber-300">hello@draita.ai</a>.
-          </p>
-        </div>
-
-        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 relative">
-          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
-                Full Name
-              </label>
-              <input 
-                id="name"
-                type="text" 
-                name="name" 
-                required 
-                placeholder="Jane Doe" 
-                class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus-ring"
-              >
-            </div>
-
-            <div>
-              <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
-                Work Email
-              </label>
-              <input 
-                id="email"
-                type="email" 
-                name="email" 
-                required 
-                placeholder="jane@company.com" 
-                class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus-ring"
-              >
-            </div>
-          </div>
-
-          <div>
-            <label for="interest" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
-              Enquiry Type
-            </label>
-            <select 
-              id="interest"
-              name="interest" 
-              class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-300 text-sm focus-ring"
-            >
-              <option>AI Governance Readiness</option>
-              <option>Digital Transformation Advisory</option>
-              <option>Process & Automation Assessment</option>
-              <option>General Strategic Enquiry</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1.5">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              placeholder="Tell us briefly what you are exploring."
-              class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus-ring resize-none"
-            ></textarea>
-          </div>
-
-          <button 
-            type="submit" 
-            class="w-full bg-cobalt hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-xl transition-all shadow-lg hover:shadow-blue-500/25 flex items-center justify-center gap-2"
-          >
-            <span>Send Enquiry</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </button>
-        </form>
-      </div>
-
     </div>
-  </main>
+  </div>
+</section>
 
-  <footer class="w-full border-t border-card-border bg-white py-8 px-6 text-center text-xs text-silver">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-      
-      <div class="brand-text text-sm font-bold text-navy">
-        DRAITA<span class="font-sans text-cobalt lowercase">.ai</span>
-      </div>
+<footer class="site-footer">
+  <div class="container foot">
+    <p>&copy; <span id="year"></span> Draita. All rights reserved.</p>
+    <p class="tagline">“Built for business. Powered by intelligent simplicity”</p>
+    <div><a href="#home">Back to top ↑</a></div>
+  </div>
+</footer>
 
-      <div>
-        Contact: 
-        <a href="mailto:hello@draita.ai" class="text-cobalt font-semibold hover:underline">
-          hello@draita.ai
-        </a>
-      </div>
-
-      <div>
-        &copy; 2026 Draita.ai. All rights reserved.
-      </div>
-
-    </div>
-  </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="assets/main.js"></script>
 </body>
 </html>
