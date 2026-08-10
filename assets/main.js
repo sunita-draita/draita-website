@@ -34,9 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = form.name.value.trim();
     const email = form.email.value.trim();
     const message = form.message.value.trim();
+    const interest = form.interest.value.trim();
 
-    if (!name || !email || !message) {
-      alert("Please fill in your Name, Email, and Message before submitting.");
+    if (!name || !email || !message || !interest) {
+      alert("Please fill in your Name, Email, Message and Interest before submitting.");
       return;
     }
 
