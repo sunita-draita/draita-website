@@ -33,9 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = form.name.value.trim();
     const email = form.email.value.trim();
     const message = form.message.value.trim();
-    const interest = form.elements["interest"]?.value;
+//    const interest = form.elements["interest"]?.value;
     
-    if (!name || !email || !message || !interest) {
+    if (!name || !email || !message) {
       alert("Please fill in your Name, Email, Message and Interest before submitting.");
       return;
     }
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .catch((err) => {
         console.error(err);
-        alert("Sorry—something went wrong. Please try again, or email hello@draita.ai.");
+        alert("Sorry—something went wrong. Please try again, or email sunita@draita.ai.");
         btn.disabled = false;
         btn.textContent = originalBtnText;
       });
