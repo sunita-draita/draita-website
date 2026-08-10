@@ -12,12 +12,11 @@ toggle?.addEventListener("click", () => {
 const yr = document.getElementById("year");
 if (yr) yr.textContent = new Date().getFullYear();
 
-// EmailJS init (v4)
-(function () {
-  emailjs.init({ publicKey: "uXZcR6dFVDpQZ17Qo" });
-})();
-
 document.addEventListener("DOMContentLoaded", () => {
+  //Initialize EmailJs once content is loaded.
+  if (typeof emailjs !== "undefined") {
+    emailjs.init({ publicKey: "uXZcR6dFVDpQZ17Qo" });
+  }
   const form = document.getElementById("contact-form");
   const successCard = document.getElementById("form-success");
   if (!form || !successCard) return;
@@ -34,8 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = form.name.value.trim();
     const email = form.email.value.trim();
     const message = form.message.value.trim();
-    const interest = form.interest.value.trim();
-
+    const interest = form.elements["interest"]?.value;
+    
     if (!name || !email || !message || !interest) {
       alert("Please fill in your Name, Email, Message and Interest before submitting.");
       return;
