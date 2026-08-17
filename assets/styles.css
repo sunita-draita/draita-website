@@ -298,7 +298,7 @@ label {
   color: var(--text);
 }
 
-input, textarea {
+input, select, textarea {
   width: 100%;
   padding: 0.9rem 1rem;
   border-radius: 12px;
