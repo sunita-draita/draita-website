@@ -39,6 +39,25 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please fill in your Name, Email, Message and Interest before submitting.");
       return;
     }
+    // Lock button
+    const originalBtnText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+
+    emailjs
+      .sendForm(SERVICE_ID, TEMPLATE_ID, form)
+      .then(() => {
+        form.style.display = "none"; // hide form
+        successCard.classList.remove("hidden"); // show thank-you card
+      })
+      .catch((err) => {
+        console.error(err);
+        alert("Sorry—something went wrong. Please try again, or email sunita@draita.ai.");
+        btn.disabled = false;
+        btn.textContent = originalBtnText;
+      });
+  });
+});
 // Toggle expandable deliverables in service cards
 function toggleDeliverables(trayId, btnElement) {
   const tray = document.getElementById(trayId);
@@ -66,22 +85,3 @@ function scrollToEnquiry(optionValue) {
     contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
-    // Lock button
-    const originalBtnText = btn.textContent;
-    btn.disabled = true;
-    btn.textContent = "Sending…";
-
-    emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, form)
-      .then(() => {
-        form.style.display = "none"; // hide form
-        successCard.classList.remove("hidden"); // show thank-you card
-      })
-      .catch((err) => {
-        console.error(err);
-        alert("Sorry—something went wrong. Please try again, or email sunita@draita.ai.");
-        btn.disabled = false;
-        btn.textContent = originalBtnText;
-      });
-  });
-});
