@@ -416,6 +416,7 @@ input:focus, textarea:focus {
   gap: 0.35rem;
   transition: opacity 0.2s ease;
   font-family: inherit;
+   margin-top: auto; /* Pins the toggle cleanly to the bottom baseline */
 }
 
 .deliverables-toggle:hover {
@@ -472,4 +473,17 @@ input:focus, textarea:focus {
   width: 100%;
   justify-content: center;
   margin-top: 0.5rem;
+}
+
+/* Ensure all service cards have identical structural height alignment */
+.grid.services .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* This pushes the expandable toggle button to the bottom of the card evenly */
+.grid.services .card .muted.small {
+  flex-grow: 1; /* Fills remaining space so buttons align at the bottom */
+  margin-bottom: 0.5rem;
 }
