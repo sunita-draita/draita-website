@@ -39,7 +39,33 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please fill in your Name, Email, Message and Interest before submitting.");
       return;
     }
+// Toggle expandable deliverables in service cards
+function toggleDeliverables(trayId, btnElement) {
+  const tray = document.getElementById(trayId);
+  if (!tray) return;
 
+  const isHidden = tray.classList.toggle('hidden');
+  const label = btnElement.querySelector('span');
+  
+  if (label) {
+    label.textContent = isHidden ? 'View Deliverables' : 'Hide Deliverables';
+  }
+  btnElement.classList.toggle('active', !isHidden);
+}
+
+// Auto-select dropdown option and smooth scroll to form
+function scrollToEnquiry(optionValue) {
+  const contactSection = document.getElementById('contact');
+  const selectDropdown = document.getElementById('interest');
+
+  if (selectDropdown && optionValue) {
+    selectDropdown.value = optionValue;
+  }
+
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
     // Lock button
     const originalBtnText = btn.textContent;
     btn.disabled = true;
