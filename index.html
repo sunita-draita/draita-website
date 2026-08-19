@@ -53,39 +53,88 @@
         We help business and technology teams understand what is being used, where governance is missing, and what needs to be improved before risk, complexity, or audit pressure forces the conversation.
       </p>
 
-      <div id="services" class="grid services" style="margin-bottom: 4rem; text-align: left;">
-        
-        <div class="card">
-          <div class="kpi" style="margin-bottom: 0.75rem;">
-            <span class="num">01</span>
-          </div>
-          <h3>AI Governance Readiness</h3>
-          <p class="muted small">
-            Assess AI adoption, governance gaps, evidence readiness, risk exposure, and practical next steps for responsible AI oversight.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="kpi" style="margin-bottom: 0.75rem;">
-            <span class="num" style="color: var(--gold);">02</span>
-          </div>
-          <h3>Process & Automation Advisory</h3>
-          <p class="muted small">
-            Identify where automation, AI, and workflow improvement can create value without adding unnecessary operational risk.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="kpi" style="margin-bottom: 0.75rem;">
-            <span class="num" style="color: var(--navy);">03</span>
-          </div>
-          <h3>Governance-Led Delivery</h3>
-          <p class="muted small">
-            Support transformation initiatives with delivery structure, stakeholder alignment, documentation, controls, and implementation discipline.
-          </p>
-        </div>
-
-      </div>
+    
+		<div id="services" class="grid services" style="margin-bottom: 4rem; text-align: left;">
+		  
+		  <div class="card">
+			<div class="kpi" style="margin-bottom: 0.75rem;">
+			  <span class="num">01</span>
+			</div>
+			<h3>AI Governance & Readiness</h3>
+			<p class="muted small" style="font-weight: 600; color: var(--navy); margin-bottom: 0.5rem;">
+			  “Are we adopting AI responsibly, and where are our governance gaps?”
+			</p>
+		
+			<button type="button" class="deliverables-toggle" onclick="toggleDeliverables('deliv-1', this)">
+			  <span>View Deliverables</span>
+			  <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+			</button>
+		
+			<div id="deliv-1" class="deliverables-tray hidden">
+			  <ul class="deliverables-list">
+				<li><strong>AI Landscape & Risk Assessment:</strong> Identify known and emerging AI use cases, ownership gaps, and areas of governance risk.</li>
+				<li><strong>Governance Framework & Controls:</strong> Define practical policies, roles, decision rights, controls, and oversight aligned to business needs.</li>
+				<li><strong>Evidence & Regulatory Readiness:</strong> Assess documentation, controls, and evidence against relevant governance and regulatory expectations.</li>
+			  </ul>
+			  <button type="button" class="btn btn-outline small-cta" onclick="scrollToEnquiry('AI Governance Readiness')">
+				Explore AI Governance &rarr;
+			  </button>
+			</div>
+		  </div>
+		
+		  <div class="card">
+			<div class="kpi" style="margin-bottom: 0.75rem;">
+			  <span class="num" style="color: var(--gold);">02</span>
+			</div>
+			<h3>Process & Automation Advisory</h3>
+			<p class="muted small" style="font-weight: 600; color: var(--navy); margin-bottom: 0.5rem;">
+			  “Where should we improve, automate, or use AI?”
+			</p>
+		
+			<button type="button" class="deliverables-toggle" onclick="toggleDeliverables('deliv-2', this)">
+			  <span>View Deliverables</span>
+			  <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+			</button>
+		
+			<div id="deliv-2" class="deliverables-tray hidden">
+			  <ul class="deliverables-list">
+				<li><strong>Process Discovery & Optimization:</strong> Map workflows, bottlenecks, handoffs, exceptions, and operational pain points.</li>
+				<li><strong>Automation & AI Opportunity Assessment:</strong> Evaluate where workflow automation, RPA, AI, or human-led redesign provides the best fit.</li>
+				<li><strong>Risk, Control & Efficiency Design:</strong> Improve speed and scalability without introducing unnecessary operational or governance risk.</li>
+			  </ul>
+			  <button type="button" class="btn btn-outline small-cta" onclick="scrollToEnquiry('Process & Automation Assessment')">
+				Assess Process Opportunities &rarr;
+			  </button>
+			</div>
+		  </div>
+		
+		  <div class="card">
+			<div class="kpi" style="margin-bottom: 0.75rem;">
+			  <span class="num" style="color: var(--navy);">03</span>
+			</div>
+			<h3>Transformation & Governance-Led Delivery</h3>
+			<p class="muted small" style="font-weight: 600; color: var(--navy); margin-bottom: 0.5rem;">
+			  “How do we actually get this transformation delivered?”
+			</p>
+		
+			<button type="button" class="deliverables-toggle" onclick="toggleDeliverables('deliv-3', this)">
+			  <span>View Deliverables</span>
+			  <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+			</button>
+		
+			<div id="deliv-3" class="deliverables-tray hidden">
+			  <ul class="deliverables-list">
+				<li><strong>Transformation Delivery & PMO:</strong> Establish delivery structure, governance, milestones, dependencies, risks, and decision-making.</li>
+				<li><strong>Technology & Vendor Evaluation:</strong> Assess solution options, vendors, implementation approaches, and enterprise fit.</li>
+				<li><strong>Stakeholder & Change Alignment:</strong> Bring business, technology, operations, governance, and leadership around a common delivery path.</li>
+			  </ul>
+			  <button type="button" class="btn btn-outline small-cta" onclick="scrollToEnquiry('Digital Transformation Advisory')">
+				Discuss Transformation &rarr;
+			  </button>
+			</div>
+		  </div>
+		
+		</div>
 
       <div id="contact" class="navy-card" style="max-width: 680px; margin: 0 auto; text-align: left;">
         <div style="margin-bottom: 2rem;">
