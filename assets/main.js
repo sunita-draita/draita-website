@@ -58,18 +58,40 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
-// Toggle expandable deliverables in service cards
+// Toggle expandable deliverables in service cards with an accordion behavior (only one open at a time)
 function toggleDeliverables(trayId, btnElement) {
-  const tray = document.getElementById(trayId);
-  if (!tray) return;
+  const targetTray = document.getElementById(trayId);
+  if (!targetTray) return;
 
-  const isHidden = tray.classList.toggle('hidden');
-  const label = btnElement.querySelector('span');
-  
-  if (label) {
-    label.textContent = isHidden ? 'View Deliverables' : 'Hide Deliverables';
+  const isAlreadyOpen = !targetTray.classList.contains('hidden');
+
+  // Step 1: Close ALL deliverables trays across all cards first
+  const allTrays = document.querySelectorAll('.deliverables-tray');
+  const allButtons = document.querySelectorAll('.deliverables-toggle');
+
+  allTrays.forEach(tray => tray.classList.add('hidden'));
+  allButtons.forEach(btn => {
+    btn.classList.remove('active');
+    const labelSpan = btn.querySelector('span');
+    if (labelSpan) labelSpan.textContent = 'View Deliverables';
+  });
+
+  // Step 2: If the clicked card's tray was NOT already open, open it now
+  if (isAlreadyOpen) {
+    // It was open, so it's now closed by the reset loop above. 
+    // We just leave it closed.
+  } else {
+    // It was closed, so open it and update its button state
+    targetTray.classList.remove('hidden');
+    btnElement.classList.add('active');
+    const labelSpan = btnElement.querySelector('span');
+    if (labelSpan) labelSpan.textContent = 'Hide Deliverables';
   }
-  btnElement.classList.toggle('active', !isHidden);
+
+  // Re-run height calculation if you are using the equalizeCardHeights function
+  if (typeof equalizeCardHeights === 'function') {
+    equalizeCardHeights();
+  }
 }
 
 // Auto-select dropdown option and smooth scroll to form
