@@ -85,3 +85,28 @@ function scrollToEnquiry(optionValue) {
     contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
+
+// Automatically equalize service card heights on load and window resize
+function equalizeCardHeights() {
+  const cards = document.querySelectorAll('.grid.services .card');
+  if (!cards.length) return;
+
+  // Reset heights first to get natural sizing
+  cards.forEach(card => card.style.minHeight = 'auto');
+
+  // Only apply equal sizing on desktop viewports (e.g., wider than 768px)
+  if (window.innerWidth > 768) {
+    let maxHeight = 0;
+    cards.forEach(card => {
+      if (card.offsetHeight > maxHeight) {
+        maxHeight = card.offsetHeight;
+      }
+    });
+    cards.forEach(card => {
+      card.style.minHeight = maxHeight + 'px';
+    });
+  }
+}
+
+window.addEventListener('load', equalizeCardHeights);
+window.addEventListener('resize', equalizeCardHeights);
