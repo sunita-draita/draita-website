@@ -419,16 +419,11 @@ input:focus, textarea:focus {
   background-color: transparent;
   cursor: pointer;
   transition: all 0.2s ease;
-  margin-top: auto; /* Pins it cleanly to the card bottom */
+  margin-top: auto;
 }
 
 /* Hover state matching standard outline CTAs */
-.deliverables-toggle:hover {
-  background-color: var(--cobalt, #0047AB);
-  color: #ffffff;
-}
-
-/* Active/Expanded state styling */
+.deliverables-toggle:hover,
 .deliverables-toggle.active {
   background-color: var(--cobalt, #0047AB);
   color: #ffffff;
@@ -487,15 +482,19 @@ deliverables-list {
   margin-top: 0.5rem;
 }
 
-/* Ensure all service cards have identical structural height alignment */
+/* 1. Change grid alignment from stretch to start so cards don't force each other to expand */
+.grid.services {
+  align-items: start !important;
+}
+
+/* 2. Style individual cards as flex containers that adjust independently */
 .grid.services .card {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: auto; /* Allow individual cards to shrink/grow independently based on state */
 }
 
-/* This pushes the expandable toggle button to the bottom of the card evenly */
+/* Push the toggle button to the bottom of whatever height the card currently is */
 .grid.services .card .muted.small {
-  flex-grow: 1; /* Fills remaining space so buttons align at the bottom */
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
